@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap">
+
+  <link rel="stylesheet" href="main.css">
+  
+  <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+  
+  <div class="container" id="home">
+
+    <div class="header">
+
+      <section class="header__heading-box">
+        <p class="header__heading">Rock</p>
+        <p class="header__heading">Paper</p>
+        <p class="header__heading">Scissors</p>
+      </section>
+
+      <section class="header__score-box">
+        <p class="header__score-text">score</p>
+        <h2 class="header__score-value">12</h2>
+      </section>
+
+    </div>
+
+    <div class="game">
+
+      <h3 class="game__h3-you game__h3">You picked</h3>
+      <h3 class="game__h3-house game__h3">The house picked</h3>
+
+      <section class="game__triangle">
+        <img class="game__icon-triangle" src="images/bg-triangle.svg" alt="triangle">
+      </section>
+
+      <section class="game__icon-rock icon" onclick="myFunction(this)">
+        <div class="game__icon-wrap"></div>
+        <img src="images/icon-rock.svg" class="game__image rock">      <!-- onclick="myFunction(this)" -->
+      </section>
+
+      <section class="game__icon-paper icon" onclick="myFunction(this)">
+        <div class="game__icon-wrap"></div>
+        <img src="images/icon-paper.svg" class="game__image paper">
+      </section>
+
+      <section class="game__icon-scissors icon" onclick="myFunction(this)">
+        <div class="game__icon-wrap"></div>
+        <img src="images/icon-scissors.svg" class="game__image scissors">
+      </section>
+
+      <section class="game__icon-paper-1 icon">
+      <div class="game__icon-wrap"></div>
+      <img src="images/icon-paper.svg" class="game__image paper">
+      </section>
+
+      <section class="game__icon-rock-1 icon">
+      <div class="game__icon-wrap"></div>
+      <img src="images/icon-rock.svg" class="game__image rock">
+      </section>
+
+      <section class="game__icon-scissors-1 icon">
+      <div class="game__icon-wrap"></div>
+      <img src="images/icon-scissors.svg" class="game__image scissors">
+      </section>
+
+    </div>
+
+    <a href="#popup" class="rules">Rules</a>
+
+  </div>
+
+  <div class="rules-popup" id="popup">
+    <div class="rules-popup__box">
+      <div class="rules-popup__contain">
+        <p>Rules</p>
+        <a href="#home"><img src="images/icon-close.svg" alt="cross" class="rules-popup__cross"></a>
+      </div>
+      <img src="images/image-rules.svg" alt="rules" class="rules-popup__image">
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
