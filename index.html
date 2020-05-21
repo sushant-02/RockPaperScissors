@@ -40,36 +40,39 @@
         <img class="game__icon-triangle" src="images/bg-triangle.svg" alt="triangle">
       </section>
 
-      <section class="game__icon-rock icon" onclick="myFunction(this)">
+      <section class="game__icon-rock icon user">
         <div class="game__icon-wrap"></div>
-        <img src="images/icon-rock.svg" class="game__image rock">      <!-- onclick="myFunction(this)" -->
+        <img src="images/icon-rock.svg" class="game__image rock" name='rock'>      <!-- onclick="myFunction(this)" -->
       </section>
 
-      <section class="game__icon-paper icon" onclick="myFunction(this)">
+      <section class="game__icon-paper icon user">
         <div class="game__icon-wrap"></div>
-        <img src="images/icon-paper.svg" class="game__image paper">
+        <img src="images/icon-paper.svg" class="game__image paper" name='paper'>
       </section>
 
-      <section class="game__icon-scissors icon" onclick="myFunction(this)">
+      <section class="game__icon-scissors icon user">
         <div class="game__icon-wrap"></div>
-        <img src="images/icon-scissors.svg" class="game__image scissors">
+        <img src="images/icon-scissors.svg" class="game__image scissors" name='scissors'>
       </section>
 
-      <section class="game__icon-paper-1 icon">
+      <section class="game__icon-paper-1 icon computer">
       <div class="game__icon-wrap"></div>
-      <img src="images/icon-paper.svg" class="game__image paper">
+      <img src="images/icon-paper.svg" class="game__image" name="paper">
       </section>
 
-      <section class="game__icon-rock-1 icon">
+      <section class="game__icon-rock-1 icon computer">
       <div class="game__icon-wrap"></div>
-      <img src="images/icon-rock.svg" class="game__image rock">
+      <img src="images/icon-rock.svg" class="game__image" name="rock">
       </section>
 
-      <section class="game__icon-scissors-1 icon">
+      <section class="game__icon-scissors-1 icon computer">
       <div class="game__icon-wrap"></div>
-      <img src="images/icon-scissors.svg" class="game__image scissors">
+      <img src="images/icon-scissors.svg" class="game__image" name="scissors">
       </section>
 
+      <p class="gameStat">You Win</p>
+      <button class="btn-play">Play Again</button>
+      
     </div>
 
     <a href="#popup" class="rules">Rules</a>
