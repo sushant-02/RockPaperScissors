@@ -60,12 +60,6 @@ body {
   color: #3b4363;
 }
 
-@media (max-width: 1024px) {
-  .header {
-    width: 65%;
-  }
-}
-
 .rules {
   text-transform: uppercase;
   text-decoration: none;
@@ -78,6 +72,12 @@ body {
   border: 2px solid #acb0b9;
   border-radius: 1rem;
   padding: 0.9rem 3rem;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    width: 65%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -327,6 +327,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 30px;
+  border-radius: 5px;
 }
 
 .remove-display {
@@ -373,6 +374,16 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  .btn-play {
+    top: 65%;
+  }
+
+  .gameStat{
+    top: 50%;
+  }
+}
+
 
 @media (max-width: 768px) {
   .game {
@@ -399,6 +410,17 @@ body {
 
   .pick-detail {
     width: 85%;
+  }
+
+  .btn-play {
+    top: 75%;
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .gameStat{
+    top: 65%;
+    font-size: 2.5rem;
   }
 }
 
