@@ -18,13 +18,13 @@ userPicked.forEach((item) => {
 })
 
 const removeDisplay = () => {
-  document.querySelector('.game__triangle').classList.toggle('remove-display');
-  userPicked.forEach((item) => item.classList.toggle('remove-display'))
+  document.querySelector('.game__triangle').classList.add('remove-display');
+  userPicked.forEach((item) => item.classList.add('remove-display'));
 }
 
 const changeStyles = () => {
-  document.querySelector('.game__h3-you').classList.toggle('show-display');
-  document.querySelector('.game__h3-house').classList.toggle('show-display');
+  document.querySelector('.game__h3-you').classList.add('show-display');
+  document.querySelector('.game__h3-house').classList.add('show-display');
 }
 
 const generateRandom = (userValue, item) => {
@@ -81,8 +81,10 @@ const replay = (item, random) => {
   playAgainBtn.addEventListener('click', () => {
     stat.classList.remove('show-display-after');
     playAgainBtn.classList.remove('show-display-after');
-    removeDisplay();
-    changeStyles();
+    document.querySelector('.game__triangle').classList.remove('remove-display');
+    userPicked.forEach((item) => item.classList.remove('remove-display'));
+    document.querySelector('.game__h3-you').classList.remove('show-display');
+    document.querySelector('.game__h3-house').classList.remove('show-display');
     item.classList.remove('show-selected-user');
     random.classList.remove('show-selected-computer');
   });
