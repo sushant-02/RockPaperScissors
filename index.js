@@ -5,7 +5,6 @@ const WINNING_CASES = {
 }
 let score = 0;
 const userPicked = document.querySelectorAll('.user');
-
 userPicked.forEach((item) => {
   document.querySelector('.header__score-value').textContent = score;
   item.addEventListener('click', () => {
@@ -14,18 +13,18 @@ userPicked.forEach((item) => {
     item.classList.add('show-selected-user');
     changeStyles();
     generateRandom(userValue, item);
+    
   })
 })
 
 const removeDisplay = () => {
-  document.querySelector('.game__triangle').classList.add('remove-display');
-  userPicked.forEach((item) => item.classList.add('remove-display'))
+  document.querySelector('.game__triangle').classList.toggle('remove-display');
+  userPicked.forEach((item) => item.classList.toggle('remove-display'))
 }
 
 const changeStyles = () => {
-  document.querySelector('.game__h3-you').classList.add('show-display');
-  document.querySelector('.game__h3-house').classList.add('show-display');
-  document.querySelector('.game__h3-house').style.transition = "all .2s .5s";
+  document.querySelector('.game__h3-you').classList.toggle('show-display');
+  document.querySelector('.game__h3-house').classList.toggle('show-display');
 }
 
 const generateRandom = (userValue, item) => {
@@ -34,6 +33,7 @@ const generateRandom = (userValue, item) => {
   random.classList.add('show-selected-computer');
   var scoreCase = checkWin(userValue, random.children[1].name);
   updateScore(scoreCase);
+  replay(item, random);
 }
 
 const checkWin = (userChoice, randomChoice) => {
@@ -48,20 +48,22 @@ const checkWin = (userChoice, randomChoice) => {
 
 const updateScore = (scoreCase) => {
   if(scoreCase === 'win') {
-    score++;
+    score = score + 1;
   } else if(scoreCase === 'lose') {
-    score--;
+    score = score - 1;
   }
   updateUI(score, scoreCase);
+  console.log(score);
 }
+
+const playAgainBtn = document.querySelector('.btn-play');
+const stat = document.querySelector('.gameStat');
 
 const updateUI = (score, scoreCase) => {
   document.querySelector('.header__score-value').textContent = score;
-  const stat = document.querySelector('.gameStat');
-  const playAgainBtn = document.querySelector('.btn-play');
 
-  stat.classList.add('show-display');
-  playAgainBtn.classList.add('show-display');
+  stat.classList.add('show-display-after');
+  playAgainBtn.classList.add('show-display-after');
 
   if(scoreCase === 'lose') {
     playAgainBtn.classList.add('lose');
@@ -73,4 +75,15 @@ const updateUI = (score, scoreCase) => {
     playAgainBtn.classList.add('win');
     stat.textContent = 'Draw';
   }
+}
+
+const replay = (item, random) => {
+  playAgainBtn.addEventListener('click', () => {
+    stat.classList.remove('show-display-after');
+    playAgainBtn.classList.remove('show-display-after');
+    removeDisplay();
+    changeStyles();
+    item.classList.remove('show-selected-user');
+    random.classList.remove('show-selected-computer');
+  });
 }

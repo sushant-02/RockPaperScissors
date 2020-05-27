@@ -13,7 +13,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .container {
@@ -343,6 +343,12 @@ body {
 .show-display {
   opacity: 1;
   visibility: visible;
+}
+
+.show-display-after {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s 0.5s;
 }
 
 .show-selected-computer {
