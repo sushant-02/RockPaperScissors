@@ -1,7 +1,7 @@
 const WINNING_CASES = {
-    'rock' : 'paper',
-    'paper' : 'scissors',
-    'scissors' : 'rock'
+  'rock' : 'paper',
+  'paper' : 'scissors',
+  'scissors' : 'rock'
 }
 let score = 0;
 const userPicked = document.querySelectorAll('.user');
@@ -13,7 +13,6 @@ userPicked.forEach((item) => {
     item.classList.add('show-selected-user');
     changeStyles();
     generateRandom(userValue, item);
-    
   })
 })
 
