@@ -32,6 +32,7 @@ const generateRandom = (userValue, item) => {
   random.classList.add('show-selected-computer');
   var scoreCase = checkWin(userValue, random.children[1].name);
   updateScore(scoreCase);
+  preventAccidentalTouch(item, random);
   replay(item, random);
 }
 
@@ -49,10 +50,13 @@ const updateScore = (scoreCase) => {
   if(scoreCase === 'win') {
     score = score + 1;
   } else if(scoreCase === 'lose') {
-    score = score - 1;
+    if(score > 0) {
+      score = score - 1;
+    } else {
+      score = 0;
+    }
   }
   updateUI(score, scoreCase);
-  console.log(score);
 }
 
 const playAgainBtn = document.querySelector('.btn-play');
@@ -76,6 +80,11 @@ const updateUI = (score, scoreCase) => {
   }
 }
 
+const preventAccidentalTouch = (item, random) => {
+  item.classList.add('disable');
+  random.classList.add('disable');
+}
+
 const replay = (item, random) => {
   playAgainBtn.addEventListener('click', () => {
     stat.classList.remove('show-display-after');
@@ -86,5 +95,9 @@ const replay = (item, random) => {
     document.querySelector('.game__h3-house').classList.remove('show-display');
     item.classList.remove('show-selected-user');
     random.classList.remove('show-selected-computer');
+    playAgainBtn.classList.remove('lose');
+    playAgainBtn.classList.remove('win');
+    item.classList.remove('disable');
+    random.classList.remove('disable');
   });
 }

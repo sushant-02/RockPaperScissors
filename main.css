@@ -204,6 +204,14 @@ body {
   visibility: hidden;
 }
 
+.game__h3-you {
+  left: 30%;
+}
+
+.game__h3-house {
+  right: 15%;
+}
+
 @media (max-width: 768px) {
   .game__h3-you {
     left: 20%;
@@ -289,7 +297,7 @@ body {
 .game__icon-paper-1 {
   opacity: 0;
   visibility: hidden;
-  transform: translate(120%, 40%) scale(1.5);
+  transform: translate(138%, 40%) scale(1.5);
   background: linear-gradient(#4865f4, #5671f5);
   box-shadow: 0 0.59rem 0 #2945d1;
 }
@@ -297,7 +305,7 @@ body {
 .game__icon-scissors-1 {
   opacity: 0;
   visibility: hidden;
-  transform: translate(120%, 40%) scale(1.5);
+  transform: translate(138%, 40%) scale(1.5);
   background: linear-gradient(#ec9e0e, #eca922);
   box-shadow: 0 0.59rem 0 #ad7610;
 }
@@ -305,7 +313,7 @@ body {
 .game__icon-rock-1 {
   opacity: 0;
   visibility: hidden;
-  transform: translate(120%, 40%) scale(1.5);
+  transform: translate(138%, 40%) scale(1.5);
   background: linear-gradient(#dc2e4e, #dd405d);
   box-shadow: 0 0.59rem 0 #9b1c34;
 }
@@ -326,7 +334,8 @@ body {
   font-size: 1.2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 10px 30px;
+  padding: 15px 50px;
+  border: none;
   border-radius: 5px;
 }
 
@@ -336,7 +345,7 @@ body {
 
 .show-selected-user {
   display: block;
-  transform: translate(-225%, 40%) scale(1.5);
+  transform: translate(-238%, 40%) scale(1.5);
   transition: transform 0.5s;
 }
 
@@ -447,4 +456,8 @@ body {
 
 .lose {
   color: #f32929;
+}
+
+.disable {
+  pointer-events: none;
 }
