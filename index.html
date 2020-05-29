@@ -12,12 +12,27 @@
     <div class="container" id="home">
       <div class="header">
         <img src="./images/logo.svg" alt="rock-paper-scissors-logo" class="header__heading-box"/>
-        <section class="header__score-box">
-          <p class="header__score-text">score</p>
-          <h2 class="header__score-value">10</h2>
-        </section>
+
+        <div class="header__score-box">
+          <section class="header__score--user header-score">
+            <p class="header__score-text">Your score</p>
+            <h2 class="header__score-value header__score-value--user">10</h2>
+          </section>
+          <section class="header__score--computer header-score">
+            <p class="header__score-text">House's score</p>
+            <h2 class="header__score-value header__score-value--computer">10</h2>
+          </section>
+        </div>
+
       </div>
 
+      <div class="header__turns">
+        <section class="header__turns-container">
+          <p class="turns__text">Turns</p>
+          <h2 class="turns__value">100</h2>
+        </section>
+      </div>
+      
       <div class="pick-detail">
         <h3 class="game__h3-you game__h3">You picked</h3>
         <h3 class="game__h3-house game__h3">The house picked</h3>

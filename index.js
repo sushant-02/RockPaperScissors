@@ -3,11 +3,16 @@ const WINNING_CASES = {
   'paper' : 'scissors',
   'scissors' : 'rock'
 }
-let score = 0;
+let turns = 0;
+let score = [0, 0];       // score = [userScore, compScore]
 const userPicked = document.querySelectorAll('.user');
 userPicked.forEach((item) => {
-  document.querySelector('.header__score-value').textContent = score;
+  document.querySelector('.turns__value').textContent = turns;
+  document.querySelector('.header__score-value--user').textContent = score[0];
+  document.querySelector('.header__score-value--computer').textContent = score[1];
   item.addEventListener('click', () => {
+    turns = turns +1;
+    console.log(turns);
     const userValue = item.children[1].name;
     removeDisplay();
     item.classList.add('show-selected-user');
@@ -48,13 +53,9 @@ const checkWin = (userChoice, randomChoice) => {
 
 const updateScore = (scoreCase) => {
   if(scoreCase === 'win') {
-    score = score + 1;
+    score[0] = score[0] + 1;
   } else if(scoreCase === 'lose') {
-    if(score > 0) {
-      score = score - 1;
-    } else {
-      score = 0;
-    }
+    score[1] = score[1] + 1;
   }
   updateUI(score, scoreCase);
 }
@@ -63,7 +64,9 @@ const playAgainBtn = document.querySelector('.btn-play');
 const stat = document.querySelector('.gameStat');
 
 const updateUI = (score, scoreCase) => {
-  document.querySelector('.header__score-value').textContent = score;
+  document.querySelector('.turns__value').textContent = turns;
+  document.querySelector('.header__score-value--user').textContent = score[0];
+  document.querySelector('.header__score-value--computer').textContent = score[1];
 
   stat.classList.add('show-display-after');
   playAgainBtn.classList.add('show-display-after');
