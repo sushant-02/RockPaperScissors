@@ -113,42 +113,6 @@ body {
   padding: 0.9rem 3rem;
 }
 
-@media (max-width: 1024px) {
-  .header {
-    width: 65%;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    width: 90%;
-    padding: 1rem 1.7rem 1rem 2.5rem;
-  }
-
-  .header img {
-    width: 100px;
-  }
-
-  .header__score-box {
-    padding: 1rem 2rem;
-  }
-
-  .header__score-text {
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    padding-bottom: 1rem;
-  }
-
-  .header__score-value {
-    font-size: 3.5rem;
-  }
-
-  .rules {
-    right: 50%;
-    transform: translateX(50%);
-  }
-}
-
 .rules-popup {
   position: absolute;
   top: 0;
@@ -180,16 +144,6 @@ body {
   background-color: #fff;
   border-radius: 1rem;
   opacity: 0;
-}
-
-@media (max-width: 430px) {
-  .rules-popup__box {
-    width: 90%;
-  }
-
-  .rules-popup__image {
-    object-fit: contain;
-  }
 }
 
 .rules-popup__contain {
@@ -229,12 +183,6 @@ body {
   transform: translateX(-50%);
 }
 
-@media (max-width: 1024px) {
-  .game {
-    width: 70%;
-  }
-}
-
 .game__h3 {
   font-size: 2.3rem;
   font-weight: 600;
@@ -251,18 +199,6 @@ body {
   right: 15%;
 }
 
-@media (max-width: 768px) {
-  .game__h3-you {
-    left: 20%;
-    font-size: 1.5rem;
-  }
-
-  .game__h3-house {
-    right: 15%;
-    font-size: 1.5rem;
-  }
-}
-
 .game__triangle {
   position: absolute;
   top: 7rem;
@@ -272,12 +208,6 @@ body {
 
 .game__icon-triangle {
   height: 20rem;
-}
-
-@media (max-width: 768px) {
-  .game__icon-triangle {
-    height: 15rem;
-  }
 }
 
 .game__icon-wrap {
@@ -416,33 +346,205 @@ body {
   justify-content: space-between;
 }
 
-@media (max-width: 1100px) {
-  .pick-detail {
-    width: 57.5%;
+.moveUser {
+  -webkit-transform: translate(-250%, 40%) scale(1.7);
+          transform: translate(-250%, 40%) scale(1.7);
+}
+
+.moveHouse {
+  -webkit-transform: translate(150%, 40%) scale(1.7);
+          transform: translate(150%, 40%) scale(1.7);
+}
+
+.win {
+  color: #3b4363;
+}
+
+.lose {
+  color: #f32929;
+}
+
+.disable {
+  pointer-events: none;
+}
+
+@media (max-width: 1400px) {
+  .header {
+    padding: 1.5rem 2rem 1.5rem 2.5rem;
+  }
+
+  .header__turns-container {
+    line-height: 1.1;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+  }
+
+  .header__turns {
+    right: 13rem;
+    padding: 1.5rem;
+  }
+  
+  .header img {
+    width: 140px;
+  }
+  
+  .turns__text {
+    font-size: 1.5rem;
+  }
+  
+  .turns__value {
+    font-size: 5rem;
+  }
+
+  .header__score-text {
+    font-size: 1.5rem;
+  }
+  
+  .header__score-value {
+    font-size: 5rem;
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+  .header {
+    padding: 1.5rem 2rem 1.5rem 2.5rem;
+  }
+
+  .header__turns-container {
+    line-height: 1.1;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+  }
+
+  .header__turns {
+    right: 10rem;
+    padding: 1.5rem;
+  }
+  
+  .header img {
+    width: 140px;
+  }
+  
+  .turns__text {
+    font-size: 1.5rem;
+  }
+  
+  .turns__value {
+    font-size: 5rem;
+  }
+
+  .header__score-text {
+    font-size: 1.5rem;
+  }
+  
+  .header__score-value {
+    font-size: 5rem;
+  }
+
+  .header {
+    width: 50%;
+  }
+
+  .game {
+    width: 60%;
+  }
+
   .pick-detail {
-    width: 65%;
+    width: 50%;
   }
 }
 
 @media (max-width: 1024px) {
+  .game {
+    width: 70%;
+  }
+  
   .btn-play {
     top: 65%;
   }
 
   .gameStat{
     top: 50%;
+    font-size: 3rem;
+  }
+
+  .rules {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+    padding: 0.9rem 2.2rem;
   }
 }
 
-
 @media (max-width: 768px) {
+  .header {
+    width: 90%;
+    padding: 1rem 1.7rem 1rem 2.5rem;
+  }
+
+  .header img {
+    width: 100px;
+  }
+
+  .header__score-box {
+    padding: 1rem 2rem;
+  }
+
+  .header__score-text {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .header__score-value {
+    font-size: 3.5rem;
+  }
+
+  .header__turns {
+    padding: .5rem;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+  }
+
+  .header__turns-container {
+    background: none;
+    padding: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .turns__text {
+    font-size: 1.5rem;
+    color: #fff;
+    padding-bottom: 0;
+  }
+  
+  .turns__value {
+    font-size: 2.5rem;
+    color: rgb(133, 139, 151);
+  }
+
+  .rules {
+    bottom: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    border-radius: 1rem;
+    padding: 0.9rem 2.2rem;
+  }
+
+  .rules-popup p {
+    font-size: 2.5rem;
+  }
+
   .game {
     width: 85%;
-    top: 30%;
+    top: 40%;
   }
 
   .computer {
@@ -457,13 +559,30 @@ body {
   .game__image {
     height: 45px;
   }
+  
+  .game__icon-triangle {
+    height: 15rem;
+  }
+  
+  .pick-detail {
+    top: 50%;
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .game__h3-you {
+    left: 20%;
+    font-size: 1.5rem;
+  }
+
+  .game__h3-house {
+    right: 15%;
+    font-size: 1.5rem;
+  }
 
   .show-selected-user {
     transform: translate(-130%, 40%) scale(1);
-  }
-
-  .pick-detail {
-    width: 85%;
   }
 
   .btn-play {
@@ -478,25 +597,64 @@ body {
   }
 }
 
-.moveUser {
-  -webkit-transform: translate(-250%, 40%) scale(1.7);
-          transform: translate(-250%, 40%) scale(1.7);
-}
+@media (max-width: 500px) {
+  .header__score-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .header-score {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    padding: .8rem 2rem;
+  }
 
-.moveHouse {
-  -webkit-transform: translate(150%, 40%) scale(1.7);
-          transform: translate(150%, 40%) scale(1.7);
-}
+  .header__score--user {
+    margin-bottom: 2px;
+  }
+  
+  .header__score-text {
+    font-size: 1.3rem;
+    letter-spacing: 0.18rem;
+    padding-bottom: 0;
+  }
+  
+  .header__score-value {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
 
+  .header__turns {
+    padding: .2rem;
+    top: 33%;
+  }
 
-.win {
-  color: #3b4363;
-}
+  .header__turns-container {
+    padding: .5rem;
+  }
 
-.lose {
-  color: #f32929;
-}
+  .turns__text {
+    font-size: 1.3rem;
+  }
+  
+  .turns__value {
+    font-size: 2rem;
+    color: rgb(133, 139, 151);
+  }
 
-.disable {
-  pointer-events: none;
+  .rules-popup__box {
+    width: 90%;
+  }
+
+  .rules-popup__image {
+    object-fit: contain;
+  }
+
+  .rules-popup p {
+    font-size: 2rem;
+  }
 }
