@@ -455,6 +455,26 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .header {
+    width: 60%;
+    transform: translateX(-70%);
+    padding: 1rem 1.5rem 1rem 2.2rem;
+  }
+
+  .header img {
+    width: 130px;
+  }
+
+  .header__score-box {
+    padding: 0;
+  }
+
+  .header__turns {
+    right: 5rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
   .game {
     width: 70%;
   }
@@ -479,6 +499,7 @@ body {
 @media (max-width: 768px) {
   .header {
     width: 90%;
+    transform: translateX(-50%);
     padding: 1rem 1.7rem 1rem 2.5rem;
   }
 
