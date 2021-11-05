@@ -11,8 +11,7 @@ userPicked.forEach((item) => {
   document.querySelector('.header__score-value--user').textContent = score[0];
   document.querySelector('.header__score-value--computer').textContent = score[1];
   item.addEventListener('click', () => {
-    turns = turns +1;
-    console.log(turns);
+    turns = turns + 1;
     const userValue = item.children[1].name;
     removeDisplay();
     item.classList.add('show-selected-user');
